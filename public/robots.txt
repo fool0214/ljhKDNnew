@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://kdn.dreamitbiz.com/sitemap.xml

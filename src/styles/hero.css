@@ -1,0 +1,365 @@
+/* ============================================
+   Hero Section — Carousel + Rich Gradients
+   ============================================ */
+
+.hero {
+    min-height: min(85vh, 800px);
+    display: flex;
+    align-items: center;
+    background: var(--hero-bg);
+    padding-top: calc(var(--nav-height) + 40px);
+    padding-bottom: 96px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* ── Carousel wrapper ── */
+.carousel-viewport {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+}
+
+.carousel-track {
+    display: flex;
+    height: 100%;
+    transition: transform 0.7s cubic-bezier(0.65, 0, 0.35, 1);
+    will-change: transform;
+}
+
+.carousel-slide {
+    position: relative;
+    flex: 0 0 100%;
+    width: 100%;
+    height: 100%;
+}
+
+/* ── All slides share the same theme gradient ── */
+.carousel-slide {
+    background: var(--hero-bg);
+}
+
+/* ── Background effects shared ── */
+.hero-bg-effect {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+}
+
+.gradient-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.6;
+}
+
+/* ── Particles (slide 0) ── */
+.particles-bg .particle,
+.particles .particle {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+    animation: float-particle var(--duration, 20s) infinite ease-in-out;
+}
+
+.particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+@keyframes float-particle {
+    0%, 100% { transform: translateY(0) translateX(0); opacity: 0; }
+    10% { opacity: 0.6; }
+    90% { opacity: 0.6; }
+    50% { transform: translateY(-100px) translateX(50px); opacity: 0.4; }
+}
+
+/* ── Matrix rain (slide 1 — Red) ── */
+.matrix-col {
+    position: absolute;
+    top: -20%;
+    font-family: 'Courier New', monospace;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.25);
+    white-space: pre;
+    line-height: 1.4;
+    animation: matrix-fall 5s linear infinite;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.15);
+}
+
+@keyframes matrix-fall {
+    0% { transform: translateY(-20%); opacity: 0; }
+    10% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { transform: translateY(120%); opacity: 0; }
+}
+
+/* ── Network nodes (slide 2) ── */
+.network-node {
+    animation: node-drift 10s ease-in-out infinite alternate;
+}
+
+@keyframes node-drift {
+    0% { opacity: 0.3; r: 2; }
+    50% { opacity: 0.7; r: 4; }
+    100% { opacity: 0.3; r: 2; }
+}
+
+/* ── Rising orbs (slide 3) ── */
+.orb {
+    position: absolute;
+    bottom: -20px;
+    border-radius: 50%;
+    animation: rise-orb 8s ease-in infinite;
+    filter: blur(1px);
+}
+
+@keyframes rise-orb {
+    0% { transform: translateY(0) scale(0.5); opacity: 0; }
+    15% { opacity: 0.8; }
+    85% { opacity: 0.4; }
+    100% { transform: translateY(-110vh) scale(1.2); opacity: 0; }
+}
+
+/* ── Geometric shapes (slide 4) ── */
+.geo-shape {
+    position: absolute;
+    border: 1.5px solid rgba(255, 255, 255, 0.15);
+    animation: float-rotate 12s ease-in-out infinite;
+    transform: rotate(var(--start-rotation, 0deg));
+}
+
+.geo-triangle {
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    background: rgba(255, 255, 255, 0.08);
+    border: none;
+}
+
+.geo-square {
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.15);
+}
+
+.geo-hexagon {
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+    background: rgba(255, 255, 255, 0.08);
+    border: none;
+}
+
+@keyframes float-rotate {
+    0%, 100% { transform: rotate(var(--start-rotation, 0deg)) translateY(0); opacity: 0.3; }
+    50% { transform: rotate(calc(var(--start-rotation, 0deg) + 180deg)) translateY(-30px); opacity: 0.7; }
+}
+
+/* ── Hero content ── */
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 880px;
+}
+
+.hero-title {
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 1.15;
+    color: var(--text-white);
+    margin-bottom: 24px;
+    letter-spacing: -0.03em;
+}
+
+.title-line {
+    display: block;
+}
+
+.highlight {
+    background: var(--highlight-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.hero-description {
+    font-size: 20px;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 36px;
+    max-width: 600px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+/* Hero buttons on dark gradient background */
+.hero-buttons .btn-primary {
+    background: #FFFFFF;
+    color: var(--primary-blue);
+    border-color: #FFFFFF;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.hero-buttons .btn-primary:hover {
+    background: #F0F4FF;
+    border-color: #F0F4FF;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.hero-buttons .btn-secondary {
+    background: transparent;
+    color: #FFFFFF;
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+.hero-buttons .btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.8);
+    color: #FFFFFF;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* ── Carousel Arrows ── */
+.carousel-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 3;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s, border-color 0.3s, transform 0.3s;
+    line-height: 1;
+}
+
+.carousel-arrow:hover {
+    background: rgba(255, 255, 255, 0.25);
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+.carousel-arrow--prev {
+    left: 24px;
+}
+
+.carousel-arrow--next {
+    right: 24px;
+}
+
+/* ── Dot Indicators (fixed near bottom) ── */
+.carousel-dots {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+    display: flex;
+    gap: 14px;
+}
+
+.carousel-dot {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 3px solid rgba(255, 255, 255, 0.5);
+    background: transparent;
+    cursor: pointer;
+    transition: background 0.3s, border-color 0.3s, transform 0.3s;
+    padding: 0;
+}
+
+.carousel-dot:hover {
+    border-color: rgba(255, 255, 255, 0.8);
+}
+
+.carousel-dot.active {
+    background: #FFFFFF;
+    border-color: #FFFFFF;
+    transform: scale(1.25);
+}
+
+/* ── Scroll Indicator (above dots) ── */
+.scroll-indicator {
+    position: absolute;
+    bottom: 64px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+}
+
+.mouse {
+    width: 30px;
+    height: 48px;
+    border: 3px solid rgba(255, 255, 255, 0.35);
+    border-radius: 15px;
+    position: relative;
+}
+
+.wheel {
+    width: 4px;
+    height: 10px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 2px;
+    position: absolute;
+    top: 9px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: scroll-wheel 1.5s infinite;
+}
+
+@keyframes scroll-wheel {
+    0% { opacity: 1; transform: translateX(-50%) translateY(0); }
+    100% { opacity: 0; transform: translateX(-50%) translateY(10px); }
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .hero-title { font-size: 44px; }
+  .carousel-arrow { width: 40px; height: 40px; font-size: 16px; }
+  .carousel-arrow--prev { left: 16px; }
+  .carousel-arrow--next { right: 16px; }
+}
+@media (max-width: 768px) {
+  .hero { min-height: min(75vh, 600px); padding-bottom: 72px; }
+  .hero-title { font-size: 36px; }
+  .hero-description { font-size: 16px; }
+  .carousel-arrow { display: none; }
+  .carousel-dots { bottom: 20px; gap: 10px; }
+  .carousel-dot { width: 12px; height: 12px; border-width: 2px; }
+  .scroll-indicator { bottom: 48px; }
+}
+@media (max-width: 480px) {
+  .hero-title { font-size: 28px; }
+  .hero-description { font-size: 15px; }
+  .hero-buttons { flex-direction: column; }
+  .hero-buttons .btn { width: 100%; text-align: center; }
+}

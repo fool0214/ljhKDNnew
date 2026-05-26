@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="KDN 직원 대상 바이브코딩을 활용한 프론트엔드·백엔드·배포 전 과정 교육 (3일, 21시간)" />
+    <meta name="author" content="DreamIT Biz" />
+    <meta name="theme-color" content="#1B2A4A" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://kdn.dreamitbiz.com/" />
+    <meta property="og:url" content="https://kdn.dreamitbiz.com" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="KDN Vibe Coding | 바이브코딩으로 풀스택 웹 개발" />
+    <meta property="og:description" content="KDN 직원 대상 바이브코딩을 활용한 프론트엔드·백엔드·배포 전 과정 교육 (3일, 21시간)" />
+    <meta property="og:image" content="https://kdn.dreamitbiz.com/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:site_name" content="KDN Vibe Coding" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="KDN Vibe Coding | 바이브코딩으로 풀스택 웹 개발" />
+    <meta name="twitter:description" content="KDN 직원 대상 바이브코딩을 활용한 프론트엔드·백엔드·배포 전 과정 교육 (3일, 21시간)" />
+    <meta name="twitter:image" content="https://kdn.dreamitbiz.com/og-image.png" />
+    <title>KDN Vibe Coding | 바이브코딩으로 풀스택 웹 개발</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/javascript">
+      (function(l) {
+        if (l.search[1] === '/') {
+          var decoded = l.search.slice(1).split('&').map(function(s) {
+            return s.replace(/~and~/g, '&')
+          }).join('?');
+          window.history.replaceState(null, null,
+            l.pathname.slice(0, -1) + decoded + l.hash
+          );
+        }
+      }(window.location))
+    </script>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
