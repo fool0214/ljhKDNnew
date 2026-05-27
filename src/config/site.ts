@@ -115,6 +115,15 @@ const site: SiteConfig = {
     },
     { path: '/vibe-practice', labelKey: 'site.nav.vibePractice', activePath: '/vibe-practice' },
     { path: '/recommended', labelKey: 'site.nav.recommended', activePath: '/recommended' },
+    {
+      labelKey: 'site.nav.board',
+      path: '/board',
+      activePath: '/board',
+      dropdown: [
+        { path: '/board?type=notice', labelKey: 'site.nav.boardNotice' },
+        { path: '/board?type=info', labelKey: 'site.nav.boardInfo' },
+      ]
+    },
   ],
 
   footerLinks: [

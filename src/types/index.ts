@@ -265,3 +265,43 @@ export type ColorTheme = 'blue' | 'red' | 'green' | 'purple' | 'orange';
 
 // ─── Language ───
 export type Language = 'ko' | 'en';
+
+// ─── Board ───
+export type BoardType = 'notice' | 'info';
+
+export interface Post {
+  id: string;
+  board_type: BoardType;
+  category: string | null;
+  title: string;
+  content: string;
+  author_id: string | null;
+  author_name: string;
+  author_email: string | null;
+  is_pinned: boolean;
+  view_count: number;
+  created_at: string;
+  updated_at: string;
+  attachments?: PostAttachment[];
+}
+
+export interface PostInput {
+  board_type: BoardType;
+  category?: string;
+  title: string;
+  content: string;
+  author_id?: string | null;
+  author_name: string;
+  author_email?: string | null;
+  is_pinned?: boolean;
+}
+
+export interface PostAttachment {
+  id: string;
+  post_id: string;
+  file_name: string;
+  file_url: string;
+  file_size: number | null;
+  file_type: string | null;
+  created_at: string;
+}

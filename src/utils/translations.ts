@@ -204,7 +204,10 @@ export const translations: Record<string, Record<string, unknown>> = {
         about: 'About',
         aboutIntent: '제작의도',
         aboutCompany: '드림아이티비즈',
-        aboutInstructor: '강사 소개'
+        aboutInstructor: '강사 소개',
+        board: '게시판',
+        boardNotice: '공지사항',
+        boardInfo: '정보게시판'
       },
       home: {
         title: 'KDN Vibe Coding',
@@ -419,7 +422,10 @@ export const translations: Record<string, Record<string, unknown>> = {
         about: 'About',
         aboutIntent: 'About This Site',
         aboutCompany: 'DreamIT Biz',
-        aboutInstructor: 'Instructor'
+        aboutInstructor: 'Instructor',
+        board: 'Board',
+        boardNotice: 'Notices',
+        boardInfo: 'Information'
       },
       home: {
         title: 'KDN Vibe Coding',

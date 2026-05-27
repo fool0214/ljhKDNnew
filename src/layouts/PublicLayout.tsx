@@ -42,6 +42,11 @@ const AboutPage = lazy(() => import('../pages/About'));
 const CompanyIntro = lazy(() => import('../pages/CompanyIntro'));
 const InstructorIntro = lazy(() => import('../pages/InstructorIntro'));
 
+// 게시판 페이지
+const BoardList = lazy(() => import('../pages/board/BoardList'));
+const BoardDetail = lazy(() => import('../pages/board/BoardDetail'));
+const BoardWrite = lazy(() => import('../pages/board/BoardWrite'));
+
 // Claude Code 교육 페이지
 const ClaudeCodeIntro = lazy(() => import('../pages/claude-code/ClaudeCodeIntro'));
 const ClaudeCodeMarkdown = lazy(() => import('../pages/claude-code/ClaudeCodeMarkdown'));
@@ -122,6 +127,12 @@ const PublicLayout = (): ReactElement => {
             <Route path="/about" element={<AboutPage />} />
             <Route path="/about/company" element={<CompanyIntro />} />
             <Route path="/about/instructor" element={<InstructorIntro />} />
+
+            {/* 게시판 */}
+            <Route path="/board" element={<BoardList />} />
+            <Route path="/board/write" element={<BoardWrite />} />
+            <Route path="/board/:id/edit" element={<BoardWrite />} />
+            <Route path="/board/:id" element={<BoardDetail />} />
 
             {/* 추천사이트 */}
             <Route path="/recommended" element={<RecommendedSites />} />
