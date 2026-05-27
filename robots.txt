@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://kdn.dreamitbiz.com/sitemap.xml
+Sitemap: https://fool0214.github.io/ljhKDNnew/sitemap.xml
