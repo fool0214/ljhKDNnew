@@ -1,1 +1,0 @@
-async function n(t,a=1,e=""){return{posts:[],total:0}}async function o(t){return null}async function r(t,a=[]){throw new Error("Supabase가 설정되지 않았습니다.")}async function c(t,a,e=[],s=[]){throw new Error("Supabase가 설정되지 않았습니다.")}async function u(t){throw new Error("Supabase가 설정되지 않았습니다.")}const i=t=>Math.max(1,Math.ceil(t/15));export{i as T,o as a,r as c,u as d,n as g,c as u};
