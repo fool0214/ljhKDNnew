@@ -11,10 +11,10 @@ const Footer = (): ReactElement => {
       <div className="container">
         <div className="footer-grid">
           <div>
-            <div className="footer-brand-mark">KDN Vibe Coding</div>
+            <div className="footer-brand-mark">🤱 수유시설 찾기</div>
             <p className="footer-tag">
-              KDN 직원을 위한 바이브코딩 풀스택 웹 개발 교육 플랫폼.
-              DreamIT Biz Group이 운영합니다.
+              전국 수유시설 정보를 지역·종류별로 빠르게 찾아보는 서비스입니다.
+              데이터 출처: 여성가족부 수유시설 현황 (sooyusil.com)
             </p>
             <div className="company-info">
               <p><strong>{site.company.name}</strong></p>

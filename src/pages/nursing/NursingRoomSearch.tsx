@@ -1,5 +1,5 @@
 import { useState, useMemo, useCallback, type ReactElement, type ChangeEvent } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useSearchParams } from 'react-router-dom';
 import Pagination from '../../components/Pagination';
 import {
   filterRooms,
@@ -20,8 +20,11 @@ const PAGE_SIZE = 20;
 const INIT_FILTER: FilterState = { zone: '전체', city: '전체', roomType: '전체', keyword: '' };
 
 const NursingRoomSearch = (): ReactElement => {
-  const [filter, setFilter] = useState<FilterState>(INIT_FILTER);
-  const [inputKeyword, setInputKeyword] = useState('');
+  const [searchParams] = useSearchParams();
+  const initZone = searchParams.get('zone') || '전체';
+  const initKeyword = searchParams.get('q') || '';
+  const [filter, setFilter] = useState<FilterState>({ ...INIT_FILTER, zone: initZone, keyword: initKeyword });
+  const [inputKeyword, setInputKeyword] = useState(initKeyword);
   const [page, setPage] = useState(1);
 
   const zoneList = useMemo(() => getZoneList(allRooms), []);

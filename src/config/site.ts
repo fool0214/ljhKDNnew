@@ -5,12 +5,12 @@
 import type { SiteConfig } from '../types';
 
 const site: SiteConfig = {
-  id: 'kdn',
+  id: 'nursing',
 
-  name: 'KDN Vibe Coding',
-  nameKo: '바이브코딩으로 풀스택 웹 개발',
-  description: 'KDN 직원 대상 바이브코딩을 활용한 프론트엔드·백엔드·배포 전 과정 교육 플랫폼 (3일, 21시간)',
-  url: 'https://kdn.dreamitbiz.com',
+  name: '수유시설 찾기',
+  nameKo: '전국 수유시설 검색',
+  description: '전국 3,000여 개 수유시설 정보를 지역·종류별로 빠르게 찾아보세요. 외출 중인 부모를 위한 수유시설 검색 서비스입니다.',
+  url: 'https://fool0214.github.io/ljhKDNnew',
 
   dbPrefix: 'kdn_',
 
@@ -21,9 +21,9 @@ const site: SiteConfig = {
 
   brand: {
     parts: [
-      { text: 'KDN', className: 'brand-dream' },
-      { text: ' Vibe', className: 'brand-it' },
-      { text: ' Coding', className: 'brand-biz' }
+      { text: '🤱 ', className: 'brand-dream' },
+      { text: '수유시설', className: 'brand-it' },
+      { text: ' 찾기', className: 'brand-biz' }
     ]
   },
 
@@ -59,62 +59,7 @@ const site: SiteConfig = {
   ],
 
   menuItems: [
-    {
-      labelKey: 'site.nav.about',
-      path: '/',
-      activePath: '/about',
-      dropdown: [
-        { path: '/about', labelKey: 'site.nav.aboutIntent' },
-        { path: '/about/company', labelKey: 'site.nav.aboutCompany' },
-        { path: '/about/instructor', labelKey: 'site.nav.aboutInstructor' },
-      ]
-    },
-    {
-      labelKey: 'site.nav.curriculum',
-      path: '/curriculum',
-      activePath: '/curriculum',
-      dropdown: [
-        { path: '/curriculum/basic', labelKey: 'site.nav.day1' },
-        { path: '/curriculum/intermediate', labelKey: 'site.nav.day2' },
-        { path: '/curriculum/advanced', labelKey: 'site.nav.day3' }
-      ]
-    },
-    {
-      labelKey: 'site.nav.learning',
-      path: '/lecture',
-      activePath: '/lecture',
-      dropdown: [
-        { path: '/lecture/setup', labelKey: 'site.nav.lectureSetup' },
-        { path: '/lecture/basic', labelKey: 'site.nav.lectureDay1' },
-        { path: '/lecture/intermediate', labelKey: 'site.nav.lectureDay2' },
-        { path: '/lecture/advanced', labelKey: 'site.nav.lectureDay3' }
-      ]
-    },
-    {
-      labelKey: 'site.nav.claudeCode',
-      path: '/claude-code/intro',
-      activePath: '/claude-code',
-      dropdown: [
-        { path: '/claude-code/intro', labelKey: 'site.nav.claudeCodeIntro' },
-        { path: '/claude-code/markdown', labelKey: 'site.nav.claudeCodeMarkdown' },
-        { path: '/claude-code/skills', labelKey: 'site.nav.claudeCodeSkills' },
-        { path: '/claude-code/advanced', labelKey: 'site.nav.claudeCodeAdvanced' },
-      ]
-    },
-    {
-      labelKey: 'site.nav.promptPractice',
-      path: '/practice',
-      activePath: '/practice',
-      dropdown: [
-        { path: '/practice', labelKey: 'site.nav.practiceMain' },
-        { path: '/prompt-cases', labelKey: 'site.nav.promptCases' },
-        { path: '/prompt-eval', labelKey: 'site.nav.promptMaterials' },
-        { path: '/prompt-eval/workshop', labelKey: 'site.nav.promptEvalWriting' },
-        { path: '/prompt-eval/practice', labelKey: 'site.nav.promptCompTest' }
-      ]
-    },
-    { path: '/vibe-practice', labelKey: 'site.nav.vibePractice', activePath: '/vibe-practice' },
-    { path: '/recommended', labelKey: 'site.nav.recommended', activePath: '/recommended' },
+    { path: '/', labelKey: 'site.nav.home', activePath: '/' },
     { path: '/nursing', labelKey: 'site.nav.nursing', activePath: '/nursing' },
     {
       labelKey: 'site.nav.board',
@@ -128,17 +73,13 @@ const site: SiteConfig = {
   ],
 
   footerLinks: [
-    { path: '/curriculum', labelKey: 'site.nav.curriculum' },
-    { path: '/practice', labelKey: 'site.nav.promptPractice' },
-    { path: '/vibe-practice', labelKey: 'site.nav.vibePractice' },
-    { path: '/recommended', labelKey: 'site.nav.recommended' }
+    { path: '/', labelKey: 'site.nav.home' },
+    { path: '/nursing', labelKey: 'site.nav.nursing' },
+    { path: '/board?type=notice', labelKey: 'site.nav.boardNotice' },
   ],
 
   familySites: [
-    { name: 'DreamIT Biz (본사이트)', url: 'https://www.dreamitbiz.com' },
-    { name: 'AI 프롬프트 교육', url: 'https://ai-prompt.dreamitbiz.com' },
-    { name: 'ChatGPT 활용', url: 'https://chatgpt.dreamitbiz.com' },
-    { name: 'Claude Code 교육', url: 'https://claude-code.dreamitbiz.com' }
+    { name: '여성가족부 수유시설 현황', url: 'https://sooyusil.com/home/22.htm' },
   ]
 };
 

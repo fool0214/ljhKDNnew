@@ -472,6 +472,282 @@
   text-decoration: underline;
 }
 
+/* ══════════════════════════════════════════
+   홈 페이지 전용
+   ══════════════════════════════════════════ */
+
+/* ── 히어로 ── */
+.nursing-hero {
+  background: var(--primary-blue);
+  padding: 80px 16px 72px;
+  text-align: center;
+}
+
+.nursing-hero-inner {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.nursing-hero-icon {
+  font-size: 56px;
+  display: block;
+  margin-bottom: 16px;
+}
+
+.nursing-hero-title {
+  font-size: 36px;
+  font-weight: 800;
+  color: #fff;
+  line-height: 1.3;
+  margin-bottom: 12px;
+}
+
+.nursing-hero-desc {
+  font-size: 16px;
+  color: rgba(255,255,255,0.8);
+  margin-bottom: 32px;
+}
+
+.nursing-hero-desc strong {
+  color: #fff;
+  font-weight: 700;
+}
+
+.nursing-hero-form {
+  display: flex;
+  gap: 8px;
+  background: #fff;
+  border-radius: var(--radius-md);
+  padding: 8px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+}
+
+.nursing-hero-select {
+  padding: 10px 12px;
+  border: none;
+  border-right: 1px solid var(--border-light);
+  font-size: 14px;
+  color: var(--text-primary);
+  background: transparent;
+  cursor: pointer;
+  min-width: 110px;
+  font-family: inherit;
+}
+
+.nursing-hero-select:focus {
+  outline: none;
+}
+
+.nursing-hero-input {
+  flex: 1;
+  padding: 10px 12px;
+  border: none;
+  font-size: 15px;
+  color: var(--text-primary);
+  background: transparent;
+  font-family: inherit;
+  min-width: 0;
+}
+
+.nursing-hero-input:focus {
+  outline: none;
+}
+
+.nursing-hero-btn {
+  padding: 10px 24px;
+  background: var(--primary-blue);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: opacity 0.2s;
+}
+
+.nursing-hero-btn:hover {
+  opacity: 0.88;
+}
+
+/* ── 통계 ── */
+.nursing-stats-section {
+  padding: 48px 16px;
+  background: var(--bg-light-gray);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.nursing-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.nursing-stat-card {
+  text-align: center;
+  padding: 24px 16px;
+  background: var(--bg-white);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+}
+
+.nursing-stat-num {
+  display: block;
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--primary-blue);
+  margin-bottom: 6px;
+}
+
+.nursing-stat-label {
+  font-size: 13px;
+  color: var(--text-light);
+  font-weight: 500;
+}
+
+/* ── 기능 소개 ── */
+.nursing-features-section {
+  padding: 64px 16px;
+}
+
+.nursing-section-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--text-primary);
+  text-align: center;
+  margin-bottom: 36px;
+}
+
+.nursing-features-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.nursing-feature-card {
+  padding: 24px 20px;
+  background: var(--bg-white);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  text-align: center;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.nursing-feature-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.nursing-feature-icon {
+  font-size: 36px;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.nursing-feature-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.nursing-feature-desc {
+  font-size: 13px;
+  color: var(--text-light);
+  line-height: 1.65;
+}
+
+/* ── 지역 탐색 ── */
+.nursing-zones-section {
+  padding: 48px 16px 64px;
+  background: var(--bg-light-gray);
+}
+
+.nursing-zones-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  max-width: 900px;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+.nursing-zone-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 18px;
+  background: var(--bg-white);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-full, 9999px);
+  text-decoration: none;
+  font-size: 14px;
+  color: var(--text-secondary);
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.nursing-zone-btn:hover {
+  border-color: var(--primary-blue);
+  color: var(--primary-blue);
+  box-shadow: var(--shadow-sm);
+}
+
+.nursing-zone-name {
+  font-weight: 600;
+}
+
+.nursing-zone-count {
+  font-size: 12px;
+  color: var(--text-light);
+}
+
+/* ── CTA ── */
+.nursing-cta-section {
+  background: var(--primary-blue);
+  padding: 64px 16px;
+  text-align: center;
+}
+
+.nursing-cta-inner {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.nursing-cta-section h2 {
+  font-size: 26px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.nursing-cta-section p {
+  font-size: 15px;
+  color: rgba(255,255,255,0.8);
+  margin-bottom: 28px;
+}
+
+.nursing-cta-btn {
+  display: inline-block;
+  padding: 14px 36px;
+  background: #fff;
+  color: var(--primary-blue);
+  border-radius: var(--radius-sm);
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.nursing-cta-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+}
+
 /* ── 반응형 ── */
 @media (max-width: 640px) {
   .nursing-page {
