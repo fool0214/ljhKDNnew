@@ -305,3 +305,21 @@ export interface PostAttachment {
   file_type: string | null;
   created_at: string;
 }
+
+// ─── Nursing Room ───
+export interface NursingRoom {
+  id: string;
+  roomName: string;
+  zoneName: string;
+  cityName: string;
+  address: string;
+  location: string;
+  roomTypeName: string;
+  fatherUseName: string | null;
+  facilityType: string | null;
+  managerTelNo: string | null;
+  latitude: number | null;
+  longitude: number | null;
+  sourceUrl: string;
+  scrapedAt: string;
+}

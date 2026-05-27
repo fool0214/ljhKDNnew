@@ -207,7 +207,8 @@ export const translations: Record<string, Record<string, unknown>> = {
         aboutInstructor: '강사 소개',
         board: '게시판',
         boardNotice: '공지사항',
-        boardInfo: '정보게시판'
+        boardInfo: '정보게시판',
+        nursing: '수유시설 찾기'
       },
       home: {
         title: 'KDN Vibe Coding',
@@ -425,7 +426,8 @@ export const translations: Record<string, Record<string, unknown>> = {
         aboutInstructor: 'Instructor',
         board: 'Board',
         boardNotice: 'Notices',
-        boardInfo: 'Information'
+        boardInfo: 'Information',
+        nursing: 'Nursing Rooms'
       },
       home: {
         title: 'KDN Vibe Coding',

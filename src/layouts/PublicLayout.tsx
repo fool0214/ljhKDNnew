@@ -42,6 +42,10 @@ const AboutPage = lazy(() => import('../pages/About'));
 const CompanyIntro = lazy(() => import('../pages/CompanyIntro'));
 const InstructorIntro = lazy(() => import('../pages/InstructorIntro'));
 
+// 수유시설 페이지
+const NursingRoomSearch = lazy(() => import('../pages/nursing/NursingRoomSearch'));
+const NursingRoomDetail = lazy(() => import('../pages/nursing/NursingRoomDetail'));
+
 // 게시판 페이지
 const BoardList = lazy(() => import('../pages/board/BoardList'));
 const BoardDetail = lazy(() => import('../pages/board/BoardDetail'));
@@ -127,6 +131,10 @@ const PublicLayout = (): ReactElement => {
             <Route path="/about" element={<AboutPage />} />
             <Route path="/about/company" element={<CompanyIntro />} />
             <Route path="/about/instructor" element={<InstructorIntro />} />
+
+            {/* 수유시설 */}
+            <Route path="/nursing" element={<NursingRoomSearch />} />
+            <Route path="/nursing/:id" element={<NursingRoomDetail />} />
 
             {/* 게시판 */}
             <Route path="/board" element={<BoardList />} />

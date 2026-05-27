@@ -115,6 +115,7 @@ const site: SiteConfig = {
     },
     { path: '/vibe-practice', labelKey: 'site.nav.vibePractice', activePath: '/vibe-practice' },
     { path: '/recommended', labelKey: 'site.nav.recommended', activePath: '/recommended' },
+    { path: '/nursing', labelKey: 'site.nav.nursing', activePath: '/nursing' },
     {
       labelKey: 'site.nav.board',
       path: '/board',
