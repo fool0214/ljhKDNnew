@@ -18,7 +18,7 @@ function App(): ReactElement {
         <AuthProvider>
           <ToastProvider>
             <ShopWrapper>
-              <Router>
+              <Router basename={import.meta.env.BASE_URL}>
                 <div className="App">
                   <Routes>
                     <Route path="*" element={<PublicLayout />} />
