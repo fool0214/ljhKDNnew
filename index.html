@@ -8,6 +8,18 @@
     <meta name="author" content="찾수" />
     <meta name="theme-color" content="#7A4A28" />
     <meta name="robots" content="index, follow" />
+    <!-- Content Security Policy -->
+    <meta http-equiv="Content-Security-Policy" content="
+      default-src 'self';
+      script-src 'self' 'unsafe-inline';
+      style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com;
+      font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com data:;
+      img-src 'self' data: https: blob:;
+      connect-src 'self' https://*.supabase.co wss://*.supabase.co https://nominatim.openstreetmap.org;
+      frame-ancestors 'none';
+    " />
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="수유시설 찾기 | 전국 수유시설 검색" />
     <meta property="og:description" content="전국 수유시설 3,000여 개 정보를 지역·종류별로 빠르게 찾아보세요." />
@@ -20,7 +32,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700;900&family=Nanum+Myeongjo:wght@400;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-    <script type="module" crossorigin src="/ljhKDNnew/assets/index-esHza1Mo.js"></script>
+    <script type="module" crossorigin src="/ljhKDNnew/assets/index-DT3VZnRM.js"></script>
     <link rel="stylesheet" crossorigin href="/ljhKDNnew/assets/index-Ck3qCt4R.css">
   <link rel="manifest" href="/ljhKDNnew/manifest.webmanifest"><script id="vite-plugin-pwa:register-sw" src="/ljhKDNnew/registerSW.js"></script></head>
   <body>
